@@ -1,0 +1,193 @@
+.show-post-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.852);
+    z-index: 1000;
+
+}
+
+.show-post-container[data-show='true'] {
+    display: flex;
+}
+
+.show-post-container .---show-post-container {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 20px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.301);
+
+
+    & .post-who {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        padding: 10px;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.258);
+
+        i {
+            width: 40px;
+            height: 40px;
+            background: var(--bodyColor);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        p {
+            font-size: 1.4rem;
+        }
+    }
+
+    & .show-post-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        gap: 20px;
+        padding: 20px;
+        height: 400px;
+        overflow: scroll;
+        margin-top: -20px;
+
+        &::-webkit-scrollbar {
+            height: 12px;
+            width: 2px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: #a4a4a4;
+            border-radius: 10px;
+
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .post-img {
+            width: 100%;
+
+            img {
+                width: calc(100% + 40px);
+            }
+        }
+
+        h1 {
+            color: var(--grayColor);
+            font-size: 15px;
+            text-align: center;
+            user-select: none;
+        }
+
+        h1:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+
+    & .send-comment {
+        display: flex;
+        align-items: start;
+        justify-content: end;
+        padding: 10px;
+        gap: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.322);
+
+        & .inputs {
+            position: relative;
+            width: 100%;
+
+            & i {
+                position: absolute;
+                left: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 20px;
+                cursor: pointer;
+                color: var(--grayColor);
+            }
+
+            & i[data-color='true'] {
+                color: var(--blueColor);
+            }
+
+            & input {
+                background-color: var(--bodyColor);
+                width: 100%;
+                border: none;
+                outline: none;
+                padding: 20px;
+                padding-right: 10px;
+                border-radius: 20px;
+                font-size: 20px;
+
+            }
+        }
+
+        img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.comment-container {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+
+    & .comment-content {
+        display: flex;
+        align-content: start;
+        justify-content: end;
+        gap: 10px;
+
+        & .pro-file {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            gap: 5px;
+            background-color: var(--bodyColor);
+            border-radius: 10px;
+            padding: 10px;
+
+            & h3 {
+                font-size: 20px;
+            }
+
+            & p {
+                font-size: 15px;
+            }
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+}

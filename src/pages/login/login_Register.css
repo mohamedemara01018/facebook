@@ -1,0 +1,248 @@
+.login-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 20px;
+
+}
+
+.login-container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+
+h1 {
+    color: var(--blueColor);
+    font-size: 70px;
+    font-weight: bold;
+
+}
+
+.login-container .content p {
+    font-size: 30px;
+    width: 450px;
+    
+}
+
+@media (max-width:890px) {
+    .login-container {
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .login-container .content {
+        align-items: center;
+    }
+
+    .login-container .content p {
+        text-align: center;
+    }
+}
+
+
+.login-form {
+    background: var(--whiteColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.174);
+}
+@media (max-width:460px) {
+    .login-form {
+        width: 350px;
+    }
+    .login-container .content p {
+        font-size: 25px;
+        width: 380px;
+        
+    }
+}
+@media (max-width:382px) {
+    .login-form {
+        width: 300px;
+    }
+    .login-container .content p {
+        font-size: 20px;
+        width: 340px;
+        
+        
+    }
+}
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    input {
+        height: 55px;
+        width: 100%;
+        border-radius: 5px;
+        padding-right: 10px;
+        font-size: 20px;
+        outline: none;
+        border: 1px solid var(--grayColor);
+    }
+
+    input:focus {
+        border: 2px solid var(--blueColor);
+    }
+
+    input.button {
+        padding: 0px;
+        background: var(--blueColor);
+        color: var(--whiteColor);
+        cursor: pointer;
+    }
+}
+
+form .password {
+    width: 100%;
+    position: relative;
+}
+
+form .password i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+a {
+    color: var(--blueColor);
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    width: 100%;
+    border-color: var(--grayHoverColor);
+}
+
+button {
+    background: rgb(4, 190, 4);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+button:hover {
+    background: #36A420;
+    cursor: pointer;
+}
+
+
+.register-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 100vh;
+    
+}
+
+.register-container p {
+    font-size: 50px;
+    color: var(--blueColor);
+}
+
+.register-container .register-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: var(--whiteColor);
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.174);
+}
+@media (max-width:415px) {
+    .register-container .register-form  {
+        width: 350px;
+    }
+}
+
+@media (max-width:365px) {
+    .register-container .register-form  {
+        width: 300px;
+    }
+}
+.register-container .register-form form input.button {
+    background: rgb(4, 190, 4);
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.register-container .register-form form input.button:hover {
+    background: #36A420;
+    cursor: pointer;
+}
+
+.file-upload-container {
+    width: 100%;
+    border: 2px solid var(--grayColor);
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.file-upload-container .image {
+    width: 100%;
+    position: relative;
+    i {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: var(--grayHoverColor);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    img {
+        width: 100%;
+        border-radius: 10px;
+    }
+}
+
+.file-upload-container .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bodyColor);
+    padding-block: 40px;
+    border-radius: 10px;
+    gap: 5px;
+
+    i {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
+    p {
+        color: var(--grayColor);
+        font-size: 16px;
+    }
+}

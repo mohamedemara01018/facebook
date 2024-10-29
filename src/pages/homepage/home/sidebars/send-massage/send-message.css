@@ -1,0 +1,132 @@
+.send-message-container {
+    position: fixed;
+    bottom: 30px;
+    left: 20px;
+    width: 300px;
+    height: 80vh;
+    background: var(--whiteColor);
+    z-index: 20000;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.171);
+    border-radius: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+    /* *********************start head part*************************** */
+    & .send-message-head-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.192);
+        padding: 10px;
+
+        & i {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            &:hover {
+                background-color: var(--bodyColor);
+            }
+        }
+
+        & .right-part {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            & div {
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
+
+            & img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    /* *********************end head part*************************** */
+
+
+
+    /* *********************start boyd part*************************** */
+    & .send-message-body-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.329);
+
+        & img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        & p {
+            margin-top: 10px;
+            color: var(--grayColor);
+        }
+    }
+
+    /* *********************end boyd part*************************** */
+    .send-message-footer-container {
+        padding: 10px;
+        width: 100%;
+        border-top: 2px solid rgba(0, 0, 0, 0.192);
+
+        & .send-part {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            & i {
+                position: absolute;
+                left: 10px;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--blueColor);
+                }
+            }
+
+            & .input {
+                width: 100%;
+
+                & input {
+                    width: 100%;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    border: none;
+                    outline: none;
+                    background: var(--bodyColor);
+                }
+
+                & input[data-color='true'] {
+                    color: red;
+                }
+            }
+        }
+    }
+
+
+}
+
+.send-message-container[data-show='true'] {
+    display: flex;
+}

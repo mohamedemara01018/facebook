@@ -1,0 +1,172 @@
+*,
+* ::before,
+* ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+}
+
+
+:root {
+  --bodyColor: #F0F2F5;
+  --whiteColor: #FFFFFF;
+  --grayColor: #8e8e8e;
+  --grayHoverColor: #F0F2F5;
+  --blueColor: #0866FF;
+  --blueHoveColor: #DFE9F2;
+  --blackColor: #39393A;
+  --whiteInBlack: #E4E6EB;
+  --textColor: #050505;
+  --leftheadColor: #F7F8FA
+}
+
+body {
+  background: var(--bodyColor);
+  /* height: 200vh; */
+}
+
+
+/* *******start part of the alert ********** */
+
+.main-alert-container {
+  width: 100vw;
+  position: fixed;
+  height: 100vh;
+  z-index: 3000;
+  transform: translateY(-2000px);
+  transition: 0.4s;
+}
+
+.main-alert-container[date-close='true'] {
+  /* transform: translateY(30px); */
+  animation: alert 1s infinite;
+}
+
+@keyframes alert {
+  0% {
+    transform: translateY(15px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(15px);
+  }
+}
+
+
+
+.alert-container {
+  background: lightgray;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.167);
+  /* padding-top: 20px; */
+  width: 360px;
+  margin-inline: auto;
+}
+
+.alert-container .content {
+  background: #FF4C4C;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+
+}
+
+
+
+
+.alert-container .title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF4C4C;
+  padding: 10px;
+  text-align: center;
+}
+
+
+.alert-container .content .desc {
+  font-size: 16px;
+  font-weight: normal;
+  color: #333333;
+  text-align: end;
+}
+
+.alert-container .content .center {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+
+  i {
+    color: lightgray;
+    font-size: 38px;
+  }
+}
+
+.alert-container .content .btn {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FF4C4C;
+  background-color: lightgray;
+  border-radius: 8px;
+  padding: 8px;
+  transition: 0.3s;
+  user-select: none;
+}
+
+.alert-container .content .btn:hover {
+  transform: scale(1.09);
+  cursor: pointer;
+}
+
+.alert-container[data-color='نجح'] {
+  .title {
+    color: rgb(39, 193, 39);
+  }
+
+  .content {
+    background: rgb(39, 193, 39);
+
+    .btn {
+      color: rgb(39, 193, 39);
+    }
+  }
+}
+
+.alert-container[data-color="هناك تحزير"] {
+  .title {
+    color: rgb(164, 164, 40);
+  }
+
+  .content {
+    background: rgb(164, 164, 40);
+
+    .btn {
+      color: rgb(164, 164, 40);
+    }
+  }
+}
+
+/* *******start part of the alert ********** */
