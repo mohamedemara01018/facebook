@@ -323,8 +323,9 @@
 .list-headleft-content {
     display: flex;
     flex-direction: row;
+    align-items: start;
+    justify-content: flex-start;
     gap: 10px;
-    align-items: center;
     position: relative;
     height: 80vh;
     padding: 20px;
@@ -351,7 +352,10 @@
 
 }
 
-
+.left-part {
+    background: red;
+    overflow: auto;
+}
 
 .left-part ul li {
     padding: 5px;
@@ -393,22 +397,26 @@
     overflow: auto;
 }
 
-.list-headleft-content .right-part::-webkit-scrollbar {
+.list-headleft-content .right-part::-webkit-scrollbar,
+.list-headleft-content .left-part::-webkit-scrollbar {
     height: 12px;
     width: 10px;
 }
 
-.list-headleft-content .right-part::-webkit-scrollbar-track {
+.list-headleft-content .right-part::-webkit-scrollbar-track,
+.list-headleft-content .left-part::-webkit-scrollbar-track {
     background: #f1f1f1;
 }
 
-.list-headleft-content .right-part::-webkit-scrollbar-thumb {
+.list-headleft-content .right-part::-webkit-scrollbar-thumb,
+.list-headleft-content .left-part::-webkit-scrollbar-thumb {
     background-color: #a4a4a4;
     border-radius: 10px;
 
 }
 
-.list-headleft-content .right-part::-webkit-scrollbar-thumb:hover {
+.list-headleft-content .right-part::-webkit-scrollbar-thumb:hover,
+.list-headleft-content .left-part::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
@@ -520,7 +528,6 @@
 
     .list-headleft-content {
         flex-direction: column-reverse;
-        overflow: auto;
         gap: 30px;
         height: 75vh;
         overflow: auto;
