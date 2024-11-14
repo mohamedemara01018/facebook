@@ -112,7 +112,7 @@
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    max-width: 500px;
+    max-width: 100%;
 
 }
 
@@ -469,13 +469,6 @@
 }
 
 @media (max-width:410px) {
-    .think-middle-container {
-        max-width: 300px;
-    }
-
-    .home-middle-container {
-        max-width: 300px;
-    }
 
     .post-footer div {
         font-size: 0.8rem;
@@ -488,7 +481,6 @@
 
 @media (max-width:360px) {
     .think-middle-container {
-        max-width:260px;
         .footer-think {
             li {
                 font-size: 0.7rem;
@@ -498,7 +490,6 @@
     }
 
     .home-middle-container {
-        max-width: 260px;
         .post-head {
             .post-head-right-part {
                 .data {

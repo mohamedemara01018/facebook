@@ -7,7 +7,7 @@ import Think from "./think/Think"
 function Home_middle() {
   return (
 
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', paddingInline: '20px' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
       <Think />
       <Posts />
     </ div>
